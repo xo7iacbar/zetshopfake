@@ -7,78 +7,13 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/loginimg"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:src="@drawable/logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/continer"
+        android:name="com.example.zetshop.LoginFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Login va parolingizni kiriting!"
-        android:textAlignment="center"
-        android:textSize="20dp"
-        app:layout_constraintTop_toBottomOf="@id/loginimg" />
+        android:layout_height="match_parent"/>
 
 
-    <EditText
-        android:background="@drawable/login_edt_shape_"
-        android:id="@+id/edt1"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_margin="20dp"
-        android:hint="Login"
-        android:paddingLeft="15dp"
-        app:layout_constraintBottom_toTopOf="@id/edt2"
-        app:layout_constraintTop_toTopOf="@id/textView"
-        tools:layout_editor_absoluteX="20dp" />
-
-    <EditText
-        android:background="@drawable/login_edt_shape_"
-        android:id="@+id/edt2"
-        android:layout_marginLeft="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginRight="20dp"
-        android:hint="Parol"
-        android:paddingLeft="15dp"
-        android:layout_marginBottom="250dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edt1" />
-
-    <CheckBox
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginRight="300dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edt1" />
 
 
-    <TextView
-        android:layout_marginLeft="80dp"
-        app:layout_constraintTop_toBottomOf="@id/edt1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Sotuvchi bo'lib kirish"
-       />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:text="Kirish"
-        android:layout_marginBottom="50dp"
-        android:background="@drawable/login_button_shape"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        app:layout_constraintBottom_toBottomOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
