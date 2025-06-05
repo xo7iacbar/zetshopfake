@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TolovFragment">
+
+
+    <ImageView
+        android:layout_marginLeft="205dp"
+        android:id="@+id/paymeid"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:src="@drawable/payme"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="205dp" />
+    <ImageView
+        android:layout_marginRight="205dp"
+        android:id="@+id/clickid"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:src="@drawable/click"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="205dp" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_marginTop="100dp"
+        android:id="@+id/appCompatButton2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/login_button_shape"
+        android:text="To'lov qilish"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paymeid"
+        app:layout_constraintTop_tobottomOf="@id/paymeid" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
