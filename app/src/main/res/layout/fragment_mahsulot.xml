@@ -7,6 +7,9 @@
     tools:context=".MahsulotFragment">
 
 <androidx.viewpager2.widget.ViewPager2
+android:layout_marginTop="5dp"
+    android:paddingStart="30dp"
+    android:paddingEnd="30dp"
     android:id="@+id/viewpager"
     android:layout_width="0dp"
     android:layout_height="0dp"
