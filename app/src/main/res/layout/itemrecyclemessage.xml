@@ -2,7 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="200dp"
-    android:id="@+id/itemmessagee"
+    android:id="@+id/itemmessaga"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginLeft="50dp"
     android:layout_marginRight="50dp"
@@ -11,6 +11,7 @@
 app:cardBackgroundColor="#D9D9D9">
 
 <TextView
+    android:id="@+id/xabarid"
     android:layout_margin="20dp"
     android:textSize="20dp"
     android:text="Assalomu Alaykum hurmatli mijoz mahsulotimiz haqida so’rashingiz mumkin!"

@@ -43,7 +43,7 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.idbtn.setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.continer, SavsaqlanganFragment()).commit()
+                .replace(R.id.continer, MahsulotFragment()).commit()
         }
     }
 
