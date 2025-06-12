@@ -7,7 +7,7 @@
     tools:context=".MahsulotFragment">
 
 <androidx.viewpager2.widget.ViewPager2
-android:layout_marginTop="5dp"
+
     android:paddingStart="30dp"
     android:paddingEnd="30dp"
     android:id="@+id/viewpager"
@@ -16,16 +16,119 @@ android:layout_marginTop="5dp"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintRight_toRightOf="parent"
     app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintBottom_toTopOf="@id/textview"
+    app:layout_constraintBottom_toTopOf="@id/scrollview"
 
     />
+<androidx.core.widget.NestedScrollView
+    android:orientation="vertical"
+android:fillViewport="true"
+    android:id="@+id/scrollview"
+    android:layout_marginTop="430dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textview"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:text="salom"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/viewpager" />
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textStyle="normal"
+            android:layout_margin="20dp"
+            android:textSize="25dp"
+            android:text="3d guitar chexol +30 anjom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+     <androidx.appcompat.widget.AppCompatButton
+         android:textColor="@color/white"
+         android:text="Savatga qo'shish"
+         android:layout_marginLeft="30dp"
+         android:layout_marginRight="130dp"
+         android:layout_marginTop="20dp"
+         android:background="@drawable/login_button_shape"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"/>
+
+        <TextView
+            android:background="#CECECE"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:textStyle="normal"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:text="Faqat 3 ta xarid qilishingiz mumkin!"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="15dp"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="400dp">
+<ImageView
+    android:layout_marginTop="10dp"
+    android:src="@drawable/viewpager1"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    />
+<TextView
+    android:layout_marginRight="30dp"
+    android:layout_marginLeft="30dp"
+    android:layout_marginTop="110dp"
+    android:textSize="30dp"
+    android:text="499 000 $"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"/>
+
+    <androidx.cardview.widget.CardView
+
+        app:cardCornerRadius="150dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="145dp"
+        app:cardBackgroundColor="#FAF212"
+        android:layout_width="30dp"
+        android:layout_height="30dp" >
+        <TextView
+            android:layout_marginTop="5dp"
+            android:textAlignment="center"
+            android:text="-50%"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+            <androidx.cardview.widget.CardView
+
+                app:cardCornerRadius="5dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="145dp"
+                app:cardBackgroundColor="#FAF212"
+                android:layout_width="110dp"
+                android:layout_height="30dp" >
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textAlignment="center"
+                    android:text="Katta Savdo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>
+
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

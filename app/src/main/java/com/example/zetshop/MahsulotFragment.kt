@@ -26,7 +26,8 @@ private const val ARG_PARAM2 = "param2"
 class MahsulotFragment : Fragment() {
 lateinit var binding: FragmentMahsulotBinding
 lateinit var vpAdapter:ViewPagerAdapter
-lateinit var handler:Handler
+
+
 
 
     private var param1: String? = null
