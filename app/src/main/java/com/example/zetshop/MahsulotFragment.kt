@@ -1,7 +1,6 @@
 package com.example.zetshop
 
 import android.os.Bundle
-import android.os.Handler
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -9,8 +8,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
-import com.example.zetshop.databinding.FragmentLoginBinding
 import com.example.zetshop.databinding.FragmentMahsulotBinding
+import com.squareup.picasso.Picasso
 import kotlin.math.abs
 
 // TODO: Rename parameter arguments, choose names that match
@@ -26,6 +25,8 @@ private const val ARG_PARAM2 = "param2"
 class MahsulotFragment : Fragment() {
 lateinit var binding: FragmentMahsulotBinding
 lateinit var vpAdapter:ViewPagerAdapter
+    lateinit var recAdapter:MahsulotRecAdapter
+
 
 
 
@@ -54,8 +55,16 @@ lateinit var vpAdapter:ViewPagerAdapter
             FragmentMahsulotBinding.inflate(LayoutInflater.from(container?.context), container, false)
         return binding.root
     }
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+
+    }
+
     private fun viewpager() {
-        installViewPager()
+
 var transformer=CompositePageTransformer()
         transformer.addTransformer(MarginPageTransformer(20))
         transformer.addTransformer{
@@ -89,6 +98,25 @@ var transformer=CompositePageTransformer()
         binding.viewpager.clipToPadding=false
         binding.viewpager.clipChildren=false
         binding.viewpager.getChildAt(0).overScrollMode=RecyclerView.OVER_SCROLL_NEVER
+
+
+
+
+         var list=ArrayList<Mahsulot>()
+        list.add(Mahsulot("180 000 $"))
+        list.add(Mahsulot("650 000 $"))
+        list.add(Mahsulot("250 000 $"))
+        list.add(Mahsulot("140 000 $"))
+        list.add(Mahsulot("120 000 $"))
+        list.add(Mahsulot("140 000 $"))
+
+
+
+        recAdapter= MahsulotRecAdapter(list)
+
+        binding.itemmahsulot.adapter=recAdapter
+
+
 
     }
     companion object {

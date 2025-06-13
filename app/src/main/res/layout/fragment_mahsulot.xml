@@ -71,8 +71,9 @@ android:fillViewport="true"
     android:layout_marginTop="10dp"
     android:src="@drawable/viewpager1"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="50dp"
     />
+
 <TextView
     android:layout_marginRight="30dp"
     android:layout_marginLeft="30dp"
@@ -117,16 +118,157 @@ android:fillViewport="true"
                     android:layout_height="match_parent"/>
 
             </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardBackgroundColor="#FFFBFB"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                app:cardCornerRadius="15dp"
+                android:layout_marginTop="180dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="70dp"
+                    android:textSize="20dp"
+                    android:text="yetkazib berish 1 kundan boshlab "
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="zetshop buyurtmalarni topshirish punkiti orqali yoki kuryer orqali"
+                    android:layout_marginTop="60dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </androidx.cardview.widget.CardView>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+<TextView
+    android:layout_margin="10dp"
+    android:textSize="30dp"
+    android:text="Mahsulot tavsifi"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"/>
+
+        <TextView
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Bizning erkaklar uchun Loro Piana mokasinlari — bu zamonaviy janoblar uchun poyabzal. Yuqori sifatli materiallardan ishlab chiqarilgan ushbu mokasinlar uzoq muddatli xizmatni va mukammal tashqi ko'rinishni kafolatlaydi. Eng yaxshi ventilyatsiya uchun perforatsiyaga ega bo'lib, ular eng issiq ob-havo sharoitida ham qurilik va yangilikni ta'minlaydi. Bizning universal poyabzalimiz har qanday holat uchun idealofis, to'y yoki shunchaki shahar bo'ylab sayr qilish bo'lsin. To'g'ri o'lchamni tanlash uchun o'lchamlar jadvalimizdan foydalaning va har kuni Loro Piana ning qulayligi va uslubidan zavqlaning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="5dp"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:textSize="30dp"
+            android:text="Sotuvchi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="190dp"
+                android:src="@drawable/logo"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"/>
+
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:text="Sotuvchidan Sorash"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="70dp"
+                android:background="@drawable/sotuvchi_shape"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+
         </androidx.cardview.widget.CardView>
 
 
+<EditText
+    android:textAlignment="center"
+    android:layout_margin="30dp"
+    android:background="@drawable/login_edt_shape_"
+    android:hint="Mahsulot haqidagi fikringiz!"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"/>
+
+<androidx.appcompat.widget.AppCompatButton
+    android:textSize="20dp"
+    android:textColor="@color/white"
+android:text="Yuborish"
+    android:layout_marginLeft="150dp"
+    android:layout_marginRight="10dp"
+    android:background="@drawable/login_button_shape"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"/>
+
+
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:textSize="20dp"
+            android:text="O'xshash Mahsulotlar >"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+      tools:listitem="@layout/itemrecylermahsulotlar"
+            android:layout_marginLeft="10dp"
+            android:nestedScrollingEnabled="false"
+            android:layout_marginTop="30dp"
+           android:layout_marginRight="10dp"
+            android:id="@+id/itemmahsulot"
+            android:layout_width="match_parent"
+            android:layout_height="310dp"
+           />
     </LinearLayout>
 
 
 
 </androidx.core.widget.NestedScrollView>
 
+    <androidx.cardview.widget.CardView
+app:cardCornerRadius="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+<TextView
+    android:layout_marginTop="5dp"
+    android:textAlignment="center"
+    android:textSize="30dp"
+    android:text="490 000 $"
+    android:layout_marginRight="250dp"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"/>
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginRight="5dp"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:text="Savatga"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_button_shape"
+            android:layout_marginLeft="170dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+    </androidx.cardview.widget.CardView>
 
 
 
