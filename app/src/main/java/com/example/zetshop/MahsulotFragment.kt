@@ -36,7 +36,7 @@ lateinit var vpAdapter:ViewPagerAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewpager()
+
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
@@ -61,6 +61,20 @@ lateinit var vpAdapter:ViewPagerAdapter
         super.onViewCreated(view, savedInstanceState)
 
 
+        var list=ArrayList<Mahsulot>()
+        list.add(Mahsulot("180 000 $"))
+        list.add(Mahsulot("650 000 $"))
+        list.add(Mahsulot("250 000 $"))
+        list.add(Mahsulot("140 000 $"))
+        list.add(Mahsulot("120 000 $"))
+        list.add(Mahsulot("140 000 $"))
+
+
+
+        recAdapter= MahsulotRecAdapter(list)
+
+        binding.itemmahsulot.adapter=recAdapter
+        viewpager()
     }
 
     private fun viewpager() {
@@ -74,7 +88,7 @@ var transformer=CompositePageTransformer()
         }
         binding.viewpager.setPageTransformer(transformer)
 
-
+        installViewPager()
     }
 
 
@@ -98,23 +112,6 @@ var transformer=CompositePageTransformer()
         binding.viewpager.clipToPadding=false
         binding.viewpager.clipChildren=false
         binding.viewpager.getChildAt(0).overScrollMode=RecyclerView.OVER_SCROLL_NEVER
-
-
-
-
-         var list=ArrayList<Mahsulot>()
-        list.add(Mahsulot("180 000 $"))
-        list.add(Mahsulot("650 000 $"))
-        list.add(Mahsulot("250 000 $"))
-        list.add(Mahsulot("140 000 $"))
-        list.add(Mahsulot("120 000 $"))
-        list.add(Mahsulot("140 000 $"))
-
-
-
-        recAdapter= MahsulotRecAdapter(list)
-
-        binding.itemmahsulot.adapter=recAdapter
 
 
 
