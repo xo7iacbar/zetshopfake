@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import com.example.zetshop.databinding.FragmentMahsulotBinding
-import com.squareup.picasso.Picasso
 import kotlin.math.abs
 
 // TODO: Rename parameter arguments, choose names that match
@@ -26,10 +25,6 @@ class MahsulotFragment : Fragment() {
 lateinit var binding: FragmentMahsulotBinding
 lateinit var vpAdapter:ViewPagerAdapter
     lateinit var recAdapter:MahsulotRecAdapter
-
-
-
-
 
     private var param1: String? = null
     private var param2: String? = null
@@ -61,7 +56,7 @@ lateinit var vpAdapter:ViewPagerAdapter
         super.onViewCreated(view, savedInstanceState)
 
 
-        var list=ArrayList<Mahsulot>()
+        var list = ArrayList<Mahsulot>()
         list.add(Mahsulot("180 000 $"))
         list.add(Mahsulot("650 000 $"))
         list.add(Mahsulot("250 000 $"))
@@ -71,10 +66,17 @@ lateinit var vpAdapter:ViewPagerAdapter
 
 
 
-        recAdapter= MahsulotRecAdapter(list)
+        recAdapter = MahsulotRecAdapter(list)
 
-        binding.itemmahsulot.adapter=recAdapter
+        binding.itemmahsulot.adapter = recAdapter
         viewpager()
+
+        binding.savatganarxbtn.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.continer, MessageFragment()).commit()
+        }
+
+
     }
 
     private fun viewpager() {

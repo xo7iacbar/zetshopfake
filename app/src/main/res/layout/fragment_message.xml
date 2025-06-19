@@ -35,6 +35,7 @@
         android:id="@+id/itemmessagee"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintTop_toBottomOf="@id/cardid"
         app:layout_constraintBottom_toTopOf="@+id/cardView" />
 
@@ -59,6 +60,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/messageyuborishbtn"
         android:textSize="8dp"
         android:textColor="@color/white"
         android:text="yuborish"

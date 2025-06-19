@@ -43,7 +43,10 @@ class MessageFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        binding.messageyuborishbtn.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.continer, TolovFragment()).commit()
+        }
 
         var list=ArrayList<Messagee>()
         list.add(Messagee(xabar = "Assalomu Alaykum!"))
