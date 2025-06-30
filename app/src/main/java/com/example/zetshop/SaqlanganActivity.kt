@@ -12,7 +12,7 @@ class SaqlanganActivity : AppCompatActivity() {
     lateinit var binding: ActivitySaqlanganBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-      binding=ActivitySaqlanganBinding.inflate(layoutInflater)
+        binding=ActivitySaqlanganBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 

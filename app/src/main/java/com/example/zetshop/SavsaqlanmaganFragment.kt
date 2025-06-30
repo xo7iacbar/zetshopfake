@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.zetshop.databinding.FragmentSavsaqlanganBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,7 +18,8 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class SavsaqlanmaganFragment : Fragment() {
-    // TODO: Rename and change types of parameters
+    lateinit var binding: FragmentSavsaqlanganBinding
+    lateinit var recAdapter3:SavatRecAdapter2
     private var param1: String? = null
     private var param2: String? = null
 
@@ -33,10 +35,27 @@ class SavsaqlanmaganFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_savsaqlanmagan, container, false)
+        binding =
+            FragmentSavsaqlanganBinding.inflate(LayoutInflater.from(container?.context), container, false)
+        return binding.root
     }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
+        var list = ArrayList<Savat>()
+        list.add(Savat("180 000 $"))
+        list.add(Savat("650 000 $"))
+        list.add(Savat("250 000 $"))
+        list.add(Savat("140 000 $"))
+        list.add(Savat("120 000 $"))
+        list.add(Savat("140 000 $"))
+
+
+
+        recAdapter3 = SavatRecAdapter2(list)
+
+        binding.itemsavatmahsulot.adapter = recAdapter3
+    }
     companion object {
         /**
          * Use this factory method to create a new instance of

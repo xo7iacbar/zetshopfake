@@ -1,5 +1,6 @@
 package com.example.zetshop
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -44,8 +45,9 @@ class TolovFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.appCompatButton2.setOnClickListener {
-            requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.continer, SavsaqlanganFragment()).commit()
+                val intent = Intent(activity, SaqlanganActivity::class.java)
+                startActivity(intent)
+
         }
 
 

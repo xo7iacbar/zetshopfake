@@ -8,19 +8,20 @@
     tools:context=".SaqlanganActivity">
 
 <androidx.fragment.app.FragmentContainerView
-    app:layout_constraintTop_toBottomOf="@+id/navButton"
+   app:layout_constraintBottom_toTopOf="@+id/navButton"
     android:id="@+id/fragmentcontiner"
     android:layout_width="match_parent"
     android:name="com.example.zetshop.SavsaqlanganFragment"
-  app:layout_constraintBottom_toBottomOf="parent"
+  app:layout_constraintTop_toTopOf="parent"
     android:layout_height="0dp"/>
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+
         android:layout_width="match_parent"
         android:id="@+id/navButton"
-      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/my_menu"
-        android:layout_height="70dp"/>
+        android:layout_height="120dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
